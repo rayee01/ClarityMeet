@@ -6,3 +6,5 @@ soundfile
 numpy
 openai-whisper
 psutil
+audio-recorder-streamlit
+
