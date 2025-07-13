@@ -1,0 +1,99 @@
+style.css
+
+/* This placeholder will be replaced by the Python script */
+:root {
+    --background-image-url: url("data:image/png;base64,PLACEHOLDER_BASE64_IMAGE_HERE");
+}
+
+/* Added to remove default browser margins/padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.stApp {
+    background-image: var(--background-image-url);
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* Keep image fixed while scrolling */
+}
+
+.stApp > header {
+    background-color: rgba(0,0,0,0); /* Make header transparent so background shows */
+}
+
+/* Apply Times New Roman to all headers (h1 to h6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Times New Roman", Times, serif;
+    color: #333; /* Consistent dark grey text for better contrast */
+}
+
+/* Optional: Add a semi-transparent background to the main content area for readability */
+.main .block-container {
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly opaque white background */
+    border-radius: 10px; /* Rounded corners for the content block */
+    /* Reduced padding to lessen space around content */
+    padding: 0.5rem; /* Adjusted from 2rem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Optional: Style for sidebar if you use it */
+.stSidebar > div:first-child {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque white background for sidebar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve button styling for a more modern look */
+.stButton>button {
+    background-color: rgba(220, 220, 220, 0.7); /* Semi-translucent light grey */
+    color: #333; /* Dark text for better contrast on light background */
+    /* Adjusted padding and added min-height for uniform size */
+    padding: 10px 20px;
+    min-height: 3.5rem; /* Ensures a consistent height for all buttons */
+    display: flex; /* Use flexbox for content alignment */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stButton>button:hover {
+    background-color: rgba(190, 190, 190, 0.8); /* Slightly darker/less translucent on hover */
+    transform: translateY(-2px);
+}
+
+.stButton>button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for selectbox */
+.stSelectbox>div>div {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Style for text area */
+.stTextArea>div>div>textarea {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+}
+
+/* Info, Success, Warning, Error boxes */
+.stAlert {
+    border-radius: 8px;
+    padding: 15px;
+}
+.stAlert.info { background-color: #e0f7fa; border-left: 5px solid #00bcd4; }
+.stAlert.success { background-color: #e8f5e9; border-left: 5px solid #4CAF50; }
+.stAlert.warning { background-color: #fffde7; border-left: 5px solid #ffc107; }
+.stAlert.error { background-color: #ffebee; border-left: 5px solid #f44336; }

@@ -1,0 +1,8 @@
+# Hide your secret key
+.streamlit/secrets.toml
+
+# Other files to ignore
+.venv/
+__pycache__/
+*.mp3
+*.wav
