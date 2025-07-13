@@ -1,5 +1,6 @@
 # app.py
 import streamlit as st
+import psutil
 import os
 from datetime import datetime
 import subprocess
